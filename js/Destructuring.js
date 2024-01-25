@@ -1,6 +1,6 @@
 console.log('Destructuring');
 
-// Object
+// Object : 객체
 function getUserInfo() {
     return {
         firstName: 'John',

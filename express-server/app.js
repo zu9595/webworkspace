@@ -1,5 +1,6 @@
 const fs = require('fs'); // require : 모듈 불러오는 함수
 const express = require('express');
+const userRouter = require('./user.js');
 const app = express();
 
 // 미들웨어. listen전에 진행하는걸 권장
@@ -50,6 +51,7 @@ const getData = (target, where) => {
     return data;
 }
 
+app.use('/user', userRouter);
 
 app.listen(3002, () => {
     console.log('http://localhost:3002');
@@ -109,6 +111,7 @@ app.delete('/posts/:id', (req, res) => {
 });
 
 // 검색을 포함하는 경우 -> queryString
+// list[0].id=100&list[0].name=
 app.get('/search', (req, res)=>{
     let keywards = req.query;
     console.log('검색조건 구성', keywards);

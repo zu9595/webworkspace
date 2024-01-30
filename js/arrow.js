@@ -1,6 +1,7 @@
 console.log('arrow.js');
 
 // 함수 선언식 => var 선언자
+hello('JS');
 function hello(name) {
     console.log(name);
 }

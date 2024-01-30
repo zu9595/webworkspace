@@ -21,12 +21,13 @@ app.post('/info', defaultParser, (req, res) => {
     let data = req.body.name;
     res.send('welcome, ' + data);
 })
+// /info => method: post, body: name=${value}
 
 app.post('/message', (req, res) => {
     let data = req.body.param;
     res.send(data.title + ', ' + data.content);
 });
-// /message => method : post, body : {param : ..}
+// /message => method : post, body : {"param": {"title" : __, "content": __}}
 
 app.listen(5000, () => {
     console.log('Server Start');

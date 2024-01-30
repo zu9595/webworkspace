@@ -26,7 +26,7 @@
 // userA.setName('Adward');
 // userA.sayHi();
 
-// ES6 - let, const
+// ES6 이후 - let, const
 class Person {
     constructor(name) {
         this._name = name;

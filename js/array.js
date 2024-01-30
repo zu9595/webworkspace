@@ -51,6 +51,11 @@ console.log(userList, newList);
 // map () : 기존 배열 -기준+조작-> 새로운 배열
 userList = [{ id: 100, name: 'Hong' }, { id: 200, name: 'Kang' }, { id: 300, name: 'Han' }];
 
+userList.map(function(obj){
+    // return 데이터 타입 제한 없음
+    return obj.id < 300 ? obj : null
+});
+
 let newArray = userList.map(function (obj) {
     // return 데이터 타입 제한없음
     return obj.id < 300 ? obj.name : null;

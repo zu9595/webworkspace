@@ -14,4 +14,4 @@ let fetch = ()=>{
     return new Promise((resolve, reject)=>{
 
     })
-}
+};

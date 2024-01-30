@@ -5,7 +5,8 @@ const data = 'pw1234';
 
 let encData = crypto.createHash('sha512')
     .update(data)
-    .digest('hex');
+    .digest('base64');
+    //.digest('hex');
 
 console.log(data, encData);
 

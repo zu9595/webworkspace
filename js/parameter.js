@@ -1,6 +1,6 @@
 
 // Default Function Parameter
-function getComment(user = 'Anony', msg = 'no comment'){
+function getComment(user = 'Anony', msg = 'no comment') {
     let result = `${msg}, from ${user}`;
     console.log(result);
 }
@@ -12,9 +12,9 @@ getComment();
 
 // Rest Parameter
 // 더하는 수의 제한이 없는 더하기 계산
-function sum(x = 0, y = 0, ...args){
+function sum(x = 0, y = 0, ...args) {
     let result = x + y;
-    for(let num of args){
+    for (let num of args) {
         result += num;
     }
     return result;
@@ -23,5 +23,5 @@ function sum(x = 0, y = 0, ...args){
 console.log(sum(1, 2));
 console.log(sum(10, 20, 30, 40));
 
-let ary = [1,2,3,4,5,6,7];
+let ary = [1, 2, 3, 4, 5, 6, 7];
 console.log(sum(...ary));

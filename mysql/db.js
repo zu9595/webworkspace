@@ -1,5 +1,6 @@
 const mysql = require('mysql');
-const sql = require('./db/customerSql.js');
+//const sql = require('./db/customerSql.js');
+const usql = require('./db/t_userSql.js');
 // sql.customerList
 
 const connectionPool = mysql.createPool({
@@ -14,7 +15,7 @@ const connectionPool = mysql.createPool({
 
 const executeQuery = async (alias, values) => {
     return new Promise((resolve, reject) => {
-        let executeSql = sql[alias];
+        let executeSql = usql[alias];
         connectionPool.query(executeSql, values, (err, results) => { // values : 속성값들
             if (err) {
                 console.log(err);

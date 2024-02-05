@@ -3,13 +3,14 @@ const mysql = require('mysql');
 const usql = require('./db/t_userSql.js');
 // sql.customerList
 
+console.table(process.env);
 const connectionPool = mysql.createPool({
-    host: '127.0.0.1',
-    port: '3306',
-    user: 'dev01',
-    password: '1234',
-    database: 'dev',
-    connectionLimit: 10,
+    host: process.env.MYSQL_HOST,
+    port: process.env.MYSQL_PORT,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PW,
+    database: process.env.MYSQL_DB,
+    connectionLimit: process.env.MYSQL_CONNECT_LIMIT,
     debug : true
 });
 
